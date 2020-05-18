@@ -1,0 +1,13 @@
+Program is stopped with LED ON, waiting for SerialUSB
+
+First step: Connect SerialUSB so that LED turns OFF. If I achieve this, it means I have SerialUSB = true.
+
+Second step: Try to send /receive buffer 
+in #ifdef TEST_MODE, the buffer pointer, data pointer(V) is not increment, and Buffer_FULL should occur.
+in #ifndef TEST_MODE, the buffer fills at a rate of 2000 Hz (When entering!).
+
+Suggestion: turn LED ON at pulse BUFFER eg. digitalWrite(LED, BUFFER)
+
+Third step: receive the buffer and write to disk.
+
+Fourth step: receive and read from disk.
